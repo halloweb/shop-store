@@ -1,42 +1,33 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view>
-			<text class="title">{{title}}</text>
-		</view>
+  <view class="full-page">
+			<scroll-view class="main" scroll-y="true">
+				<Banner/>
+				<view>
+					<product-list/>
+				</view>
+			</scroll-view>
+		<Footer/>
 	</view>
 </template>
 
 <script>
+  import Banner from '@/components/banner.vue'
+  import Footer from '@/components/footer-nav.vue'
+  import ProductList from '@/components/product-list.vue'
 	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
-
-		},
-		methods: {
-
+		components: {
+			Banner,
+			ProductList,
+			Footer
 		}
 	}
 </script>
 
-<style>
-	.content {
-		text-align: center;
-		height: 400upx;
+<style lang="scss">
+.full-page {
+	height: 100vh;
+	.main {
+		height: calc(100% - 60px)
 	}
-
-	.logo {
-		height: 200upx;
-		width: 200upx;
-		margin-top: 200upx;
-	}
-
-	.title {
-		font-size: 36upx;
-		color: #8f8f94;
-	}
+}
 </style>

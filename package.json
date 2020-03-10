@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "npm run dev:h5",
-    "build": "npm run build:h5",
+    "serve": "npm run dev:mp-weixin",
+    "build": "npm run build:mp-weixin",
     "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js",
     "dev:h5": "cross-env NODE_ENV=development UNI_PLATFORM=h5 vue-cli-service uni-serve",
     "dev:mp-qq": "cross-env NODE_ENV=development UNI_PLATFORM=mp-qq vue-cli-service uni-build --watch",
@@ -36,9 +36,11 @@
     "@dcloudio/uni-mp-weixin": "^2.0.0-26120200226001",
     "@dcloudio/uni-stat": "^2.0.0-26120200226001",
     "flyio": "^0.6.2",
+    "node-sass": "^4.13.1",
     "regenerator-runtime": "^0.12.1",
+    "sass-loader": "^8.0.2",
     "vue": "^2.6.10",
-    "vuex": "^3.0.1"
+    "vuex": "^3.1.2"
   },
   "devDependencies": {
     "@dcloudio/uni-cli-shared": "^2.0.0-26120200226001",
